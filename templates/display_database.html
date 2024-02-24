@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Database</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        h2 {
+            margin-top: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            padding: 10px 0;
+            border-bottom: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Database Contents</h1>
+        <h2>QR Codes Data:</h2>
+        <ul>
+            {% for qr_code in qr_codes_data %}
+                <li>{{ qr_code }}</li>
+            {% endfor %}
+        </ul>
+        <h2>Keys Data:</h2>
+        <ul>
+            {% for key_data in keys_data %}
+                <li>{{ key_data }}</li>
+            {% endfor %}
+        </ul>
+        <h2>User Data:</h2>
+        <ul>
+            {% for user in user_data %}
+                <li>{{ user }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
